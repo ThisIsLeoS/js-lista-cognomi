@@ -30,7 +30,7 @@ while (isLoopContinuing)
     if (!/^[A-Z]/.test(lastName) || !/^[a-zA-Z]+$/.test(lastName))
     {
         lastName = 
-            prompt("Last names must be capitalized and can only contain letters\n\nEnter a valid" +
+            prompt("Last names must be capitalized and can only contain letters\n\nEnter a valid " +
             "last name");
     }
     // else the inserted string is valid
