@@ -23,11 +23,14 @@ var lastNames = ["Bianchi", "Rossi", "Conte", "Salvini", "Di Maio"];
 var lastName = prompt("Enter your last name");
 
 /* the unsorted collection is printed (the method join is used to add a space between each item of the collection) */
-document.getElementsByClassName("unsorted-collection-msg")[0].textContent = "The unsorted list is: " + lastNames.join(", ");
+document.getElementsByClassName("unsorted-collection-msg")[0].textContent = 
+    "The unsorted list is: " + lastNames.join(", ");
 lastNames.push(lastName);
 
 /* the sorted collection is printed (the method join is used to add a space between each item of the collection) */
-document.getElementsByClassName("sorted-collection-msg")[0].textContent = "The sorted list is: " + lastNames.sort().join(", ");
+document.getElementsByClassName("sorted-collection-msg")[0].textContent = 
+    "The sorted list is: " + lastNames.sort().join(", ");
 
 // the position of the user's lastName is printed
-document.getElementsByClassName("item-position-msg")[0].textContent = "Your position in the sorted list is: " + (lastNames.indexOf(lastName) + 1);
+document.getElementsByClassName("item-position-msg")[0].textContent = 
+    "Your position in the sorted list is: " + (lastNames.indexOf(lastName) + 1);
