@@ -8,6 +8,26 @@ DESCRIZIONE:
 
 QUINDI OUTPUT sarà:
 - array disordinato di partenza
-- array ordinato;
--  posizione in cui si trova il cognome dell’utente nell’array ordinato. */
+- array ordinato
+- posizione in cui si trova il cognome dell’utente nell’array ordinato 
 
+BONUS:
+- l’utente non è un dev, quindi gli diremo in che posizione si trova in modo “umano”, quindi la
+posizione 1 sarà 1 e non zero;
+- elaborazione di entrambi a livello di output e ottimizzazione codice (da ora sarà abbastanza una
+costante come bonus);
+- iniziare a pensare/gestione dei casi limite (questo se lo fate, fatelo in altra sottocartella
+dell’ex e non nella cartella della consegna di base).*/
+
+var lastNames = ["Bianchi", "Rossi", "Conte", "Salvini", "Di Maio"];
+var lastName = prompt("Enter your last name");
+
+/* the unsorted collection is printed (the method join is used to add a space between each item of the collection) */
+document.getElementsByClassName("unsorted-collection-msg")[0].textContent = "The unsorted list is: " + lastNames.join(", ");
+lastNames.push(lastName);
+
+/* the sorted collection is printed (the method join is used to add a space between each item of the collection) */
+document.getElementsByClassName("sorted-collection-msg")[0].textContent = "The sorted list is: " + lastNames.sort().join(", ");
+
+// the position of the user's lastName is printed
+document.getElementsByClassName("item-position-msg")[0].textContent = "Your position in the sorted list is: " + (lastNames.indexOf(lastName) + 1);
