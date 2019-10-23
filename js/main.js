@@ -22,12 +22,14 @@ dell’ex e non nella cartella della consegna di base).*/
 var lastNames = ["Bianchi", "Rossi", "Conte", "Salvini", "Di Maio"];
 var lastName = prompt("Enter your last name");
 
-/* the unsorted collection is printed (the method join is used to add a space between each item of the collection) */
+/* the unsorted collection is printed (the method join is used to add a space between each item of
+the collection) */
 document.getElementsByClassName("unsorted-collection-msg")[0].textContent = 
     "The unsorted list is: " + lastNames.join(", ");
 lastNames.push(lastName);
 
-/* the sorted collection is printed (the method join is used to add a space between each item of the collection) */
+/* the sorted collection is printed (the method join is used to add a space between each item of
+the collection) */
 document.getElementsByClassName("sorted-collection-msg")[0].textContent = 
     "The sorted list is: " + lastNames.sort().join(", ");
 
