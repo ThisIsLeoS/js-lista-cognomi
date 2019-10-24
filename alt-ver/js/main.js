@@ -22,19 +22,11 @@ dell’ex e non nella cartella della consegna di base).*/
 var lastNames = ["Bianchi", "Rossi", "Conte", "Salvini", "Di Maio"];
 var lastName = prompt("Enter your last name");
 
-var isLoopContinuing = true;
-while (isLoopContinuing)
+/* while the inserted string isn't capitalized or contains at least one character that's not a letter */
+while (!/^[A-Z]/.test(lastName) || !/^[a-zA-Z]+$/.test(lastName))
 {
-    /* if the inserted string isn't capitalized or contains at least one character that's not a
-    letter */
-    if (!/^[A-Z]/.test(lastName) || !/^[a-zA-Z]+$/.test(lastName))
-    {
-        lastName = 
-            prompt("Last names must be capitalized and can only contain letters\n\nEnter a valid " +
-            "last name");
-    }
-    // else the inserted string is valid
-    else isLoopContinuing = false;
+    lastName = prompt("Last names must be capitalized and can only contain letters\n\nEnter a" + 
+        "valid last name");
 }
 
 /* the unsorted collection is printed (the method join is used to add a space between each item of
